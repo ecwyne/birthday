@@ -126,6 +126,7 @@ body {
   color: #333;
   width: 340px;
   padding: 20px;
+  white-space: pre-line;
 }
 .friend .friend-experience {
   margin-right: 20px;

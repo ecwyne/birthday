@@ -22,30 +22,26 @@
 
 	<div id="friend-quotes-headline">
 		<div class="headline-experience">
-			What's your favorite experience with Kathleen?
+			What's your favorite memory of Kathleen?
 		</div>
 		<div class="headline-admire">
-			What are things you admire about Kathleen?
+			What do you admire about Kathleen?
 		</div>
 	</div>
 	<div id="friend-quotes">
 		<ul>
 			{{#each entries}}
 			<li class="friend" id="{{_id}}">
-				<div class="friend-experience">
-					My favorite experience was spending the hackathon sitting together, stressing out over the amount of work we had to do, but still managing to pull through and kick our project's asses.
-				</div>
+				<div class="friend-experience">{{favoriteMemory}}</div>
 				<div class="friend-id">
 					<div class="friend-photo">
-						<img src="img/alex-bukhta.jpg" />
+						<img src="{{photo}}" />
 					</div>
 					<div class="friend-name">
-						Alex
+						{{#if name}}{{name}}{{else}}{{email}}{{/if}}
 					</div>
 				</div>
-				<div class="friend-admire">
-					The thing I admire most is how dedicated and hard working Shirley is. Everyone works hard at Harvard, but Shirley really takes that to a new level. And the best part is, she can still smile and be happy. While many of us use the amount of work we have as an excuse to be self centered, she never fails to be loving, caring, or thoughtful, and I admire that to no end.
-				</div>
+				<div class="friend-admire">{{admire}}</div>
 			</li>
 			{{/each}}
 		</ul>
@@ -61,7 +57,7 @@
 		<ul>
 			{{#each entries}}
 			<li class="word" id="{{_id}}_word">
-				<span class="quote-mark">&quot;</span>uplifting<span class="quote-mark">&quot;</span>
+				<span class="quote-mark">&quot;</span>{{oneWord}}<span class="quote-mark">&quot;</span>
 			</li>
 			{{/each}}
 		</ul>

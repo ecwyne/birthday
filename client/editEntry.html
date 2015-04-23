@@ -2,9 +2,79 @@
 	<div class="container">
 		<div class="jumbotron">
 			<div class="container">
-				<h1>Birthday Notes</h1>
-				<span class="pull-right"><a href="/birthday" class="btn btn-primary">See what people are saying</a></span>
-				<h2>{{email}}</h2>
+				<div class="row">
+					<div class="col-xs-8">
+						<h1>Birthday Notes</h1>
+						<p>*changes are automatically saved</p>
+					</div>
+					<div class="col-xs-4">
+						<span class="pull-right">{{email}}<a href="/birthday" class="btn btn-primary">See what people are saying</a></span>
+					</div>
+				</div>
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="favoriteMemory" class="col-sm-4 control-label">
+							What is your favorite memory of Kathleen?
+						</label>
+						<div class="col-sm-6">
+							<textarea id="favoriteMemory" class="form-control" rows="5" placeholder="Oh my gosh! When Kathleen was still in diapers...     &#9786;"></textarea>
+						</div>
+						<div class="col-sm-2">
+							{{flash 'save-favoriteMemory'}}
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="admire" class="col-sm-4 control-label">
+							Tell Kathleen what you admire about her!
+						</label>
+						<div class="col-sm-6">
+							<textarea id="admire" class="form-control" rows="5" placeholder="Kathleen, I am who I am because of your presense in my life. You are the single most..."></textarea>
+						</div>
+						<div class="col-sm-2">
+							{{flash 'save-admire'}}
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="oneWord" class="col-sm-4 control-label">
+							If you could choose one word to describe Kathleen, what would it be?
+							<br>
+							<a href="http://www.thesaurus.com/browse/Beautiful" target="_blank">Thesaurus.com</a>
+						</label>
+
+						<div class="col-sm-6">
+							<input id="oneWord" type="text" class="form-control" >
+						</div>
+						<div class="col-sm-2">
+							{{flash 'save-oneWord'}}
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="name" class="col-sm-4 control-label">Your Name</label>
+						<div class="col-sm-6">
+							<input id="name" type="text" class="form-control">
+						</div>
+						<div class="col-sm-2">
+							{{flash 'save-name'}}
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="name" class="col-sm-4 control-label">
+							Your Photo
+							<br>
+							<img src="{{photo}}" class="photo-preview"/>
+							<br>
+							<div style="width: 125px; float: right;">
+								{{flash 'save-photo'}}
+							</div>
+						</label>
+						<div class="col-sm-6">
+							{{> photoUp photoUpOptions}}
+						</div>
+					</div>
+					<div class="form-group text-center">
+						<button type="button" class="btn btn-default saveBtn">Save</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

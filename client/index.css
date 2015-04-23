@@ -1,3 +1,14 @@
 .jumbotron {
 	margin-top: 25px;
 }
+
+.photo-preview {
+	width: 100px;
+	height: 100px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	border: 2px solid #fff;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
