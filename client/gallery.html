@@ -1,0 +1,79 @@
+<template name="gallery">
+
+	<audio loop id="soundtrack">
+		<source src="/just-the-way.mp3" type="audio/mpeg"/>
+		<embed height="0" width="0" src="/just-the-way.mp3"/>
+	</audio>
+
+	<div id="intro">
+		<h1 class="animated bounceInDown">Happy 22nd Birthday, Kathleen!</h1>
+
+		<div id="intro-scroll" class="animated fadeIn">
+			<div id="intro-scroll-text">scroll down!</div>
+			<div id="intro-scroll-text">(and turn up the volume!)</div>
+			<div id="intro-scroll-icon">
+				<i class="fa fa-arrow-down"></i>
+			</div>
+		</div>
+	</div>
+	<div class="intro2-line" id="intro2-line1"><h2>We talked to a few of your friends ...</h2></div>
+	<div class="intro2-line" id="intro2-line2"><h2>And asked them some questions ...</h2></div>
+	<div class="intro2-line" id="intro2-line3"><h2>Here's what they said :)</h2></div>
+
+	<div id="friend-quotes-headline">
+		<div class="headline-experience">
+			What's your favorite experience with Kathleen?
+		</div>
+		<div class="headline-admire">
+			What are things you admire about Kathleen?
+		</div>
+	</div>
+	<div id="friend-quotes">
+		<ul>
+			{{#each entries}}
+			<li class="friend" id="{{_id}}">
+				<div class="friend-experience">
+					My favorite experience was spending the hackathon sitting together, stressing out over the amount of work we had to do, but still managing to pull through and kick our project's asses.
+				</div>
+				<div class="friend-id">
+					<div class="friend-photo">
+						<img src="img/alex-bukhta.jpg" />
+					</div>
+					<div class="friend-name">
+						Alex
+					</div>
+				</div>
+				<div class="friend-admire">
+					The thing I admire most is how dedicated and hard working Shirley is. Everyone works hard at Harvard, but Shirley really takes that to a new level. And the best part is, she can still smile and be happy. While many of us use the amount of work we have as an excuse to be self centered, she never fails to be loving, caring, or thoughtful, and I admire that to no end.
+				</div>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+
+	<div class="clear"></div>
+
+	<div class="intro2-line" id="intro2-line4"><h2>We also asked them, "If you could describe Kathleen in one word ..."</h2></div>
+
+	<div class="intro2-line" id="intro2-line5"><h2>"What would it be?"</h2></div>
+
+	<div id="one-word">
+		<ul>
+			{{#each entries}}
+			<li class="word" id="{{_id}}_word">
+				<span class="quote-mark">&quot;</span>uplifting<span class="quote-mark">&quot;</span>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+
+	<div class="end-line" id="end-line1">
+		<h2>We love you, Kathleen!</h2>
+		<p>Happy 22nd Birthday!</p>
+		<p>Wish we could be with you!</p>
+
+		<div class="signature">
+			<p><i class="fa fa-heart"></i>,<br/>your friends and family</p>
+		</div>
+	</div>
+</template>
