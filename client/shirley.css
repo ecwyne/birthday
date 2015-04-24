@@ -154,6 +154,7 @@ body {
   box-shadow: 3px 3px 0px #b50000;
   padding: 6px;
   min-width: 88px;
+  max-width: 170px;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 800;

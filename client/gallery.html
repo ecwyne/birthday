@@ -38,7 +38,13 @@
 						<img src="{{photo}}" />
 					</div>
 					<div class="friend-name">
+						{{#if isAdmin}}
+						<a href="/edit/{{email}}">
+							{{#if name}}{{name}}{{else}}{{email}}{{/if}}
+						</a>
+						{{else}}
 						{{#if name}}{{name}}{{else}}{{email}}{{/if}}
+						{{/if}}
 					</div>
 				</div>
 				<div class="friend-admire">{{admire}}</div>

@@ -1,3 +1,9 @@
+Template.gallery.helpers({
+	isAdmin: function (){
+		return Router.current().data().admin;
+	}
+});
+
 Template.gallery.rendered = function (){
 	$(window).scroll(function() {
 		if ($('#soundtrack').length)
