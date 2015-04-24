@@ -153,7 +153,7 @@ body {
   background: #ff6b6b;
   box-shadow: 3px 3px 0px #b50000;
   padding: 6px;
-  width: 88px;
+  min-width: 88px;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 800;

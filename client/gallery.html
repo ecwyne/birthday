@@ -34,7 +34,7 @@
 			<li class="friend" id="{{_id}}">
 				<div class="friend-experience">{{favoriteMemory}}</div>
 				<div class="friend-id">
-					<div class="friend-photo">
+					<div class="friend-photo text-center">
 						<img src="{{photo}}" />
 					</div>
 					<div class="friend-name">
@@ -56,9 +56,11 @@
 	<div id="one-word">
 		<ul>
 			{{#each entries}}
+			{{#if oneWord}}
 			<li class="word" id="{{_id}}_word">
 				<span class="quote-mark">&quot;</span>{{oneWord}}<span class="quote-mark">&quot;</span>
 			</li>
+			{{/if}}
 			{{/each}}
 		</ul>
 	</div>

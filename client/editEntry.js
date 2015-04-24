@@ -7,6 +7,11 @@ Template.editEntry.helpers({
 			jCrop: {
 				aspectRatio: 1
 			},
+			loadImage: {
+				maxWidth: 300,
+				maxHeight: 300,
+				canvas: true
+			},
 			showInfo: false,
 			//showClear: true,
 			callback: function (err, photo){
